@@ -68,8 +68,8 @@ mqtt:
   discovery: true
   discovery_prefix: cmnd
 
-switch: !include switches.yaml
-light: !include lights.yaml
+switch: !include_dir_merge_list switches
+light: !include_dir_merge_list lights
 
 device_tracker:
   - platform: owntracks

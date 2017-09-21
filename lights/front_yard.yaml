@@ -1,0 +1,24 @@
+- platform: mqtt
+  name: "Driveway"
+  state_topic: "fhem/driveway/light"
+  command_topic: "fhem/driveway/light/set"
+  payload_on: "on"
+  payload_off: "off"
+- platform: mqtt
+  name: "Front yard"
+  state_topic: "fhem/front_yard/light"
+  command_topic: "fhem/front_yard/light/set"
+  payload_on: "on"
+  payload_off: "off"
+- platform: mqtt
+  name: "Front Terrace"
+  state_topic: "fhem/front_terrace/light"
+  command_topic: "fhem/front_terrace/light/set"
+  payload_on: "on"
+  payload_off: "off"
+- platform: mqtt
+  name: "Christmas"
+  state_topic: "fhem/christmas/light"
+  command_topic: "fhem/christmas/light/set"
+  payload_on: "on"
+  payload_off: "off"
