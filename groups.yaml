@@ -107,6 +107,11 @@ garden:
   entities:
     - group.garden_lights
     - group.garden_switches
+backyard:
+  name: Backyard
+  entities:
+    - light.backyard
+    - light.shed
 garden_lights:
   name: Garden Lights
   entities:
@@ -116,7 +121,7 @@ garden_lights:
     - light.christmas
     - light.pool
     - light.terrace
-    - light.backyard
+    - group.backyard
     - light.garden
 garden_switches:
   name: Garden Switches

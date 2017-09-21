@@ -190,3 +190,9 @@
   command_topic: "fhem/christmas/light/set"
   payload_on: "on"
   payload_off: "off"
+- platform: mqtt
+  name: "Shed"
+  state_topic: "fhem/shed/light"
+  command_topic: "fhem/shed/light/set"
+  payload_on: "on"
+  payload_off: "off"
