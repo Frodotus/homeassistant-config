@@ -1,0 +1,39 @@
+#weblink.router:
+#  icon: mdi:router-wireless
+switch.front_door_switch:
+  hidden: true
+switch.front_door_relay:
+  hidden: true
+switch.front_door:
+  friendly_name: Front door
+light.samis_room:
+  friendly_name: Sami's room
+light.peppis_room:
+  friendly_name: Peppi's room
+light.clothes_room_kaisa:
+  friendly_name: Kaisa's clothes room
+light.clothes_room_toni:
+  friendly_name: Toni's clothes room
+media_player.all:
+  hidden: true
+media_player.bedroom:
+  hidden: true
+media_player.bedroom_tv:
+  hidden: true
+media_player.kitchen:
+  hidden: true
+media_player.tv:
+  hidden: true
+media_player.terace:
+  hidden: true
+media_player.upstairs:
+  hidden: true
+group.toni:
+  entity_picture: /local/toni.jpg
+group.sami:
+  entity_picture: /local/sami.jpg
+group.peppi:
+  entity_picture: /local/peppi.jpg
+group.kaisa:
+  entity_picture: /local/kaisa.jpg
+

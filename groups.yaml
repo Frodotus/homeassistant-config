@@ -1,0 +1,153 @@
+### GROUPS ###
+default_view:
+  view: yes
+  icon: mdi:home 
+  entities:
+    - group.doors
+    - group.weather
+    - group.family
+    - group.google_home
+    - group.speedtest
+doors:
+  name: Doors
+  entities:
+    - switch.front_door
+    - switch.garage_door
+weather:
+  name: Weather
+  entities:
+    - sun.sun
+    - sensor.yr_symbol
+    - sensor.yr_temperature
+family:
+  name: Family
+  entities:
+    - group.toni
+    - group.kaisa
+    - group.sami
+    - group.peppi
+    - switch.away_mode
+speedtest:
+  name: Speedtest
+  entities:
+    - sensor.speedtest_download
+    - sensor.speedtest_upload
+    - sensor.speedtest_ping
+
+household:
+  entities:
+    - device_tracker.toni_e5823
+    - device_tracker.kaisa
+    - device_tracker.sami
+    - device_tracker.peppi
+
+toni:
+  name: Toni
+  entities:
+    - device_tracker.toni_e5823
+kaisa:
+  name: Kaisa
+  entities:
+    - device_tracker.kaisa
+sami:
+  name: Sami
+  entities:
+    - device_tracker.sami
+peppi:
+  name: Peppi
+  entities:
+    - device_tracker.peppi
+
+upstairs:
+  name: upstairs
+  view: yes
+  icon: mdi:arrow-up-bold
+  entities:
+    - group.upstairs_lights
+upstairs_lights:
+  name: Upstairs lights
+  entities:
+    - light.living_room
+    - light.living_room_spot
+    - light.hall
+    - light.dining_room
+    - light.kitchen
+    - light.kitchen_ambient
+    - light.peppis_room
+    - light.samis_room
+    - light.staircase_roof
+    - light.bedroom
+    - light.clothes_room_kaisa
+    - light.clothes_room_toni
+    - light.toilet
+downstairs:
+  name: Downstairs
+  view: yes
+  icon: mdi:arrow-down-bold
+  entities:
+    - group.downstairs_lights
+downstairs_lights:
+  name: Downstairs lights
+  entities:
+    - light.lobby
+    - light.lobby_closet
+    - light.entry
+    - light.fireplace_room
+    - light.movie_room
+    - light.movie_room_ambient
+    - light.office
+    - light.utility_room
+    - light.storage
+    - light.toilet_downstairs
+    - light.staircase_wall
+garden:
+  name: Garden
+  view: yes
+  icon: mdi:flower
+  entities:
+    - group.garden_lights
+    - group.garden_switches
+garden_lights:
+  name: Garden Lights
+  entities:
+    - light.driveway
+    - light.front_yard
+    - light.front_terrace
+    - light.christmas
+    - light.pool
+    - light.terrace
+    - light.backyard
+    - light.garden
+garden_switches:
+  name: Garden Switches
+  entities:
+    - switch.pool_cleaner
+    - switch.car_heater
+front_yard_lights:
+  name: Front yard Lights
+  entities:
+    - light.driveway
+    - light.front_yard
+    - light.front_terrace
+backyard_lights:
+  name: Backyard Lights
+  entities:
+    - light.pool
+    - light.terrace
+google_home:
+    name: "Google Home"
+    entities:
+      - media_player.Google_Home
+#Links:
+#  - weblink.router
+
+ventilation:
+  name: Ventilation
+  view: yes
+#  icon: mdi:home-automation
+  icon: mdi:fan
+  entities:
+    - switch.sauna_mode
+    - switch.fireplace_mode
+    - switch.away_mode
+    - switch.air_conditioning

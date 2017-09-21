@@ -1,0 +1,164 @@
+- id: home_notification_toni
+  alias: Toni Home notification
+  hide_entity: true
+  trigger:
+    platform: state
+    entity_id: device_tracker.toni
+    from: not_home
+    to: home
+  action:
+    service: notify.leino_home_phone_toni
+    data:
+      message: Wellcome home!
+      data:
+        actions:
+        - action: open
+          icon: /static/icons/favicon-192x192.png
+          title: Open Home Assistant
+        - action: open_door
+          title: Open Door
+- id: open_door_button
+  alias: Open Door Button
+  initial_state: true
+  hide_entity: true
+  trigger:
+  - platform: event
+    event_type: html5_notification.clicked
+    event_data:
+      action: open_door
+  action:
+  - service: homeassistant.turn_on
+    data:
+      entity_id:
+      - switch.front_door
+- id: turn_on_backyard_lights_at_sunset
+  alias: Turn on backyard lights at sunset
+  initial_state: true
+  hide_entity: false
+  trigger:
+  - event: sunset
+    platform: sun
+  action:
+  - data:
+      entity_id: group.backyard_lights
+    service: homeassistant.turn_on
+- id: turn_on_front_yard_lights_at_sunset
+  alias: Turn on front yard lights at sunset
+  initial_state: true
+  hide_entity: false
+  trigger:
+  - event: sunset
+    platform: sun
+  action:
+  - data:
+      entity_id: group.front_yard_lights
+    service: homeassistant.turn_on
+- id: turn_off_backyard_lights_at_2300
+  alias: Turn off backyard lights at 2300
+  trigger:
+  - at: '23:00:00'
+    platform: time
+  action:
+  - data:
+      entity_id: group.backyard_lights
+    service: homeassistant.turn_off
+- id: turn_off_front_yard_lights_at_0100
+  alias: Turn off front yard lights at 0100
+  trigger:
+  - at: 01:00:00
+    platform: time
+  action:
+  - data:
+      entity_id: group.front_yard_lights
+    service: homeassistant.turn_off
+- id: turn_on_backyard_lights_at_0700
+  alias: Turn on backyard lights at 0700
+  trigger:
+  - at: 07:00:00
+    platform: time
+  action:
+  - data:
+      entity_id: group.backyard_lights
+    service: homeassistant.turn_on
+  condition:
+  - before: sunrise
+    condition: sun
+- id: turn_on_front_yard_lights_at_0700
+  alias: Turn on front yard lights at 0700
+  trigger:
+  - at: 07:00:00
+    platform: time
+  action:
+  - data:
+      entity_id: group.front_yard_lights
+    service: homeassistant.turn_on
+  condition:
+  - before: sunrise
+    condition: sun
+- id: turn_off_backyard_lights_at_sunrise
+  alias: Turn off backyard lights at sunrise
+  initial_state: true
+  hide_entity: false
+  trigger:
+  - event: sunrise
+    platform: sun
+  action:
+  - data:
+      entity_id: group.backyard_lights
+    service: homeassistant.turn_off
+- id: turn_off_front_yard_lights_at_sunrise
+  alias: Turn off front yard lights at sunrise
+  initial_state: true
+  hide_entity: false
+  trigger:
+  - event: sunrise
+    platform: sun
+  action:
+  - data:
+      entity_id: group.front_yard_lights
+    service: homeassistant.turn_off
+  condition: []
+- action:
+  - data:
+      entity_id: switch.away_mode
+    service: homeassistant.turn_off
+  alias: Turn off away mode at 0200
+  condition: []
+  id: '1505848876245'
+  trigger:
+  - at: 02:00:00
+    platform: time
+- action:
+  - data:
+      entity_id: switch.away_mode
+    service: switch.turn_on
+  alias: Away mode at sleep time
+  condition: []
+  id: '1505925441877'
+  trigger:
+  - at: '22:00:00'
+    platform: time
+- action:
+  - data:
+      entity_id: switch.away_mode
+    service: switch.turn_on
+  alias: Away mode when nobody is at home
+  condition: []
+  id: '1505988009685'
+  trigger:
+  - entity_id: group.household
+    from: home
+    platform: state
+    to: not_home
+- action:
+  - data:
+      entity_id: switch.away_mode
+    service: switch.turn_off
+  alias: Home mode when someone is at home
+  condition: []
+  id: '1505988430306'
+  trigger:
+  - entity_id: group.household
+    from: not_home
+    platform: state
+    to: home

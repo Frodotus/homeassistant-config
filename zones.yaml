@@ -1,0 +1,15 @@
+- name: Lidl
+  latitude: 62.2377981
+  longitude: 25.8168317
+  radius: 100
+  icon: mdi:cart
+- name: Varastomyymala
+  latitude: 62.239805
+  longitude: 25.82572
+  radius: 100
+  icon: mdi:cart
+- name: K-Aijala
+  latitude: 62.2322389
+  longitude: 25.8099217
+  radius: 100
+  icon: mdi:cart
