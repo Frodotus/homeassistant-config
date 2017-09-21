@@ -61,7 +61,7 @@ script: !include scripts.yaml
 weblink: !include web_links.yaml
 
 ifttt:
-  key: !secure ifttt_key
+  key: !secret ifttt_key
 
 mqtt:
   broker: 172.17.0.1
