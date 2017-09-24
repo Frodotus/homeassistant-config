@@ -2,6 +2,8 @@
 .uuid
 home-assistant.log
 home-assistant_v2.db
+home-assistant_v2.db-shm
+home-assistant_v2.db-wal
 html5_push_registrations.conf
 known_devices.yaml
 secrets.yaml

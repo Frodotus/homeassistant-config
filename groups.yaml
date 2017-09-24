@@ -19,6 +19,7 @@ weather:
     - sun.sun
     - sensor.weather_symbol
     - sensor.weather_temperature
+    - sensor.weather_precipitation
     - sensor.weather_humidity
     - sensor.weather_wind_speed
 family:
@@ -153,7 +154,6 @@ google_home:
 ventilation:
   name: Ventilation
   view: yes
-#  icon: mdi:home-automation
   icon: mdi:fan
   entities:
     - switch.sauna_mode

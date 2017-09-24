@@ -56,10 +56,12 @@ sensor.weather_symbol:
   friendly_name: Weather
 sensor.weather_temperature:
   friendly_name: Temperature
+sensor.weather_precipitation:
+  friendly_name: Precipitation
+  icon: mdi:water
 sensor.weather_humidity:
-  icon: mdi:weather-fog
+  icon: mdi:water-percent
   friendly_name: Humidity
 sensor.weather_wind_speed:
   icon: mdi:weather-windy
   friendly_name: Wind
-
