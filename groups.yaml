@@ -100,6 +100,7 @@ downstairs_lights:
     - light.movie_room_ambient
     - light.office
     - light.utility_room
+    - light.sauna
     - light.storage
     - light.toilet_downstairs
     - light.staircase_wall

@@ -64,3 +64,9 @@
   command_topic: "fhem/utility_room/light/set"
   payload_on: "on"
   payload_off: "off"
+- platform: mqtt
+  name: "Sauna"
+  state_topic: "fhem/sauna/light"
+  command_topic: "fhem/sauna/light/set"
+  payload_on: "on"
+  payload_off: "off"
