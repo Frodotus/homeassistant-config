@@ -1,5 +1,5 @@
 .HA_VERSION
--uuid
+.uuid
 home-assistant.log
 home-assistant_v2.db
 html5_push_registrations.conf

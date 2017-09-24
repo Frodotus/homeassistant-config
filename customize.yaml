@@ -1,11 +1,17 @@
-#weblink.router:
-#  icon: mdi:router-wireless
 switch.front_door_switch:
   hidden: true
 switch.front_door_relay:
   hidden: true
 switch.front_door:
   friendly_name: Front door
+switch.fireplace
+  icon: mdi:fire
+switch.away_mode
+  icon: mdi:home
+switch.air_conditioning
+  icon: mdi:snowflake
+switch.sauna_mode
+  icon: mdi:water
 light.samis_room:
   friendly_name: Sami's room
 light.peppis_room:
@@ -36,4 +42,3 @@ group.peppi:
   entity_picture: /local/peppi.jpg
 group.kaisa:
   entity_picture: /local/kaisa.jpg
-

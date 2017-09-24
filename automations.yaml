@@ -162,3 +162,27 @@
     from: not_home
     platform: state
     to: home
+- action:
+  - data:
+      entity_id: switch.sauna_mode
+    service: switch.turn_on
+  alias: Sauna mode on when bathroom lights turn on
+  condition: []
+  id: '1506200042903'
+  trigger:
+  - entity_id: light.bathroom
+    from: 'off'
+    platform: state
+    to: 'on'
+- action:
+  - data:
+      entity_id: switch.sauna_mode
+    service: switch.turn_off
+  alias: Sauna mode off when bathroom lights turn off
+  condition: []
+  id: '1506200145234'
+  trigger:
+  - entity_id: switch.bathroom
+    from: 'on'
+    platform: state
+    to: 'off'

@@ -123,6 +123,7 @@ garden_lights:
     - light.terrace
     - group.backyard
     - light.garden
+    - light.pine
 garden_switches:
   name: Garden Switches
   entities:
@@ -139,6 +140,7 @@ backyard_lights:
   entities:
     - light.pool
     - light.terrace
+    - light.pine
 google_home:
     name: "Google Home"
     entities:

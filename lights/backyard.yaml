@@ -28,3 +28,9 @@
   command_topic: "fhem/shed/light/set"
   payload_on: "on"
   payload_off: "off"
+- platform: mqtt
+  name: "Pine"
+  state_topic: "fhem/pine/light"
+  command_topic: "fhem/pine/light/set"
+  payload_on: "on"
+  payload_off: "off"
