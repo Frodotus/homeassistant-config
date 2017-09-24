@@ -7,7 +7,6 @@
     - windSpeed
     - windDirection
     - humidity
-    - cloudiness
 - platform: speedtest
   minute:
     - 0

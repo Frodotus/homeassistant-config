@@ -4,7 +4,7 @@ switch.front_door_relay:
   hidden: true
 switch.front_door:
   friendly_name: Front door
-switch.fireplace:
+switch.fireplace_mode:
   icon: mdi:fire
 switch.away_mode:
   icon: mdi:home
@@ -12,6 +12,12 @@ switch.air_conditioning:
   icon: mdi:snowflake
 switch.sauna_mode:
   icon: mdi:water
+switch.car_heater:
+  icon: mdi:car
+switch.pool_cleaner:
+  icon: mdi:pool
+switch.garage_door:
+  icon: mdi:garage
 light.samis_room:
   friendly_name: Sami's room
 light.peppis_room:
@@ -20,6 +26,10 @@ light.clothes_room_kaisa:
   friendly_name: Kaisa's clothes room
 light.clothes_room_toni:
   friendly_name: Toni's clothes room
+light.pine:
+  icon: mdi:pine-tree
+light.backyard:
+  icon: spotlight-beam
 media_player.all:
   hidden: true
 media_player.bedroom:
@@ -42,3 +52,14 @@ group.peppi:
   entity_picture: /local/peppi.jpg
 group.kaisa:
   entity_picture: /local/kaisa.jpg
+sensor.weather_symbol:
+  friendly_name: Weather
+sensor.weather_temperature:
+  friendly_name: Temperature
+sensor.weather_humidity:
+  icon: mdi:weather-fog
+  friendly_name: Humidity
+sensor.weather_wind_speed:
+  icon: mdi:weather-windy
+  friendly_name: Wind
+
