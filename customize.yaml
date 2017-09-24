@@ -4,13 +4,13 @@ switch.front_door_relay:
   hidden: true
 switch.front_door:
   friendly_name: Front door
-switch.fireplace
+switch.fireplace:
   icon: mdi:fire
-switch.away_mode
+switch.away_mode:
   icon: mdi:home
-switch.air_conditioning
+switch.air_conditioning:
   icon: mdi:snowflake
-switch.sauna_mode
+switch.sauna_mode:
   icon: mdi:water
 light.samis_room:
   friendly_name: Sami's room
